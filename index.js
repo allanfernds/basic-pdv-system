@@ -46,6 +46,8 @@ function register() {
   homeOwner = document.querySelector("input[name='homeOwner']").value = "";
   homeType = document.getElementById("homeType").value = "";
   homeArea = document.querySelector("input[name='homeArea']").value = "";
+  homeStatus = document.getElementById("homeStatus").checked = false;
+
 
 }
 
