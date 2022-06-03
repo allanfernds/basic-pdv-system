@@ -5,51 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="index.js"></script>
-    <script src="home.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Home List</title>
 </head>
 <body>
     <div class="container">
+        
         <form class="">
+            
             <div>
-                <label class="label">Proprietario </label>
-                <input class="input "type="text" name="homeOwner" id="homeOwner">
+                <label class="label">Produto </label>
+                <input class="input "type="text" name="product" id="product">
+            </div>
+            <div>
+                <label class="label">Preço </label>
+                <input class="input "type="number" name="price" id="price">
             </div>
 
-            <div>
-                <label class="label">Tipo de imovel </label>
-                <select class="select" id="homeType" name="homeType">
-                  <option>Casa</option>
-                  <option>Apartamento</option>
-                </select>
-            </div>
-            <div>
-                <label class="label"> Area </label>
-                <input class="column input is-one" type="number" name="homeArea" id="homeArea">
-            </div>
-    
-            <div>
-                <label class="label">Esta Alugado? </label>
-                <label class="radio">
-                    <input type="radio" id="homeStatus" name="homeStatus">
-                    Sim
-                  </label>
-                  <label class="radio">
-                    <input type="radio" id="homeStatus" name="homeStatus">
-                    Não
-                  </label>
-            </div>
+
+          
            
-            <button type="button" onclick="register()" class="button is-info">Cadastrar</button>
+            <button type="button" onclick="register()" class="button is-info">Confirmar</button>
         </form>
-        <div class="home-list">
-            <ul>
+        <div class="selled-product-list" id="selled-product-list">
+            <ul id="list-section">
   
             </ul>
+            <div class="total-section">
+                <label class="label">Total do dia </label>
+                <input value="0" class="input" type="number" name="total" id="total">
+            </div>
         </div>
     </div>
 
 </body>
+<script src="https://kit.fontawesome.com/db71538a46.js" crossorigin="anonymous"></script>
 </html>

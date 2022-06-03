@@ -15,37 +15,41 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 3rem;
-    border: 1px solid rgb(10, 158, 111);
+    border: 2px solid rgb(0, 0, 0);
  
 }
-.home-list{
+.selled-product-list{
+    list-style-type: none;
     width: 600px;
     margin-top: 10px;
 
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 3rem;
-    border: 1px solid rgb(10, 158, 111);
-}
-span{
-    margin-top: 10px;
-    border-radius: 10px;
-    padding: 3px 7px;
-    color: rgb(255, 255, 255) ;
+    border: 2px solid rgb(0, 0, 0);
 }
 li{
-    margin-top: 10px;
-}
-.homeDiv{
-    border: 1px solid green;
-    border-radius: 10px;
-    padding: 10px;
+    font-weight: bold;
+    padding: 3px;
+    border-radius: 4px;
+    margin: 5px;
+    border: 1px solid black;
 }
 .deleteButton{
-    margin-top: 5px;
-    border-radius: 5px;
+    border: none;
+    margin-left: 15px;
+    border-radius: 100px;
     padding: 3px 7px;
-    background-color: rgb(204, 74, 74);
+    background-color: rgb(194, 26, 26);
     color: rgb(255, 255, 255) ;
+    font-weight: bold;
+}
+.deleteButton:hover{
+    border: 1px dashed black;
+}
+.total-section{
+    border-radius: 20px;
+    padding: 20px;
+    border: 2px solid black;
 }

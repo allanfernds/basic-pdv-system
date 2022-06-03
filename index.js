@@ -1,57 +1,31 @@
 
 
 function register() {
-  let homeOwner = document.querySelector("input[name='homeOwner']").value;
-  let homeType = document.getElementById("homeType").value;
-  let homeArea = document.querySelector("input[name='homeArea']").value;
-  let homeStatus = document.querySelector("input[name='homeStatus']").checked;
+  let product = document.querySelector("input[name='product']").value;
+  let price = parseFloat(document.querySelector("input[name='price']").value);
+  let total = document.querySelector("input[name='total']");
+  let value = parseFloat(total.value)
+  total.value = value + price
+  var data = new Date();
+
+  var hora    = data.getHours(); 
+  var min     = data.getMinutes(); 
+  var str_hora = "[" + hora + ':' + min + "]  ";        
+
+//---------------------------------------------------
+  var totalSection = document.createElement("h4")
+  var product_li = document.createElement("li");
+  product_li.innerText = (str_hora + "Produto: " + product + '  ||  ' +"Preço: " + price +" R$")
+  var selledList = document.getElementById('list-section')
+//---------------------------------------------------
 
 
-  //const userHome = new home(homeOwner, homeType, homeArea, homeStatus)
-
-  var list = document.querySelector("ul")
-  var spanStatus = document.createElement("span")
 
 
-  if (homeStatus == true) {
-    spanStatus.innerText = "Alugado"
-    spanStatus.style.backgroundColor = "orange"
-   
-  } else if(homeStatus == false) {
-    spanStatus.innerText = "Disponivel"
-    spanStatus.style.backgroundColor = "green"
-   
-  }
+  selledList.appendChild(product_li)
+  selledList.appendChild(totalSection)
  
-  console.log(homeStatus)
-
-  var deleteButton = document.createElement("button")
-  deleteButton.innerText = "Remover"
-  deleteButton.type = "button"
-  deleteButton.setAttribute("onclick", "deleteHome(this)")
-  deleteButton.className = "deleteButton"
-
-
-  var divHome = document.createElement("div")
-  var liHome = document.createElement("li")
-
-  liHome.innerText = ("\nProprietario: " + homeOwner + "\nTipo de Imovel: " + homeType + "\nArea: " + homeArea + "\n")
-  divHome.className = "homeDiv"
-
-  divHome.appendChild(spanStatus)
-  divHome.appendChild(liHome)
-  divHome.appendChild(deleteButton)
-  list.appendChild(divHome)
-
-  homeOwner = document.querySelector("input[name='homeOwner']").value = "";
-  homeType = document.getElementById("homeType").value = "";
-  homeArea = document.querySelector("input[name='homeArea']").value = "";
-  homeStatus = document.getElementById("homeStatus").checked = false;
-
-
+  
+  product = document.querySelector("input[name='product']").value = "";
+  price = document.querySelector("input[name='price']").value = 0 ;
 }
-
-function deleteHome(button){
-  let li = button.parentNode
-  document.querySelector("ul").removeChild(li)
- }
