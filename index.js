@@ -6,17 +6,17 @@ function register() {
   let total = document.querySelector("input[name='total']");
   let value = parseFloat(total.value)
   total.value = value + price
-  var data = new Date();
+  let data = new Date();
 
-  var hora    = data.getHours(); 
-  var min     = data.getMinutes(); 
-  var str_hora = "[" + hora + ':' + min + "]  ";        
+  let hora    = data.getHours(); 
+  let min     = data.getMinutes(); 
+  let str_hora = "[" + hora + ':' + min + "]  ";        
 
 //---------------------------------------------------
-  var totalSection = document.createElement("h4")
-  var product_li = document.createElement("li");
+  let totalSection = document.createElement("h4")
+  let product_li = document.createElement("li");
   product_li.innerText = (str_hora + "Produto: " + product + '  ||  ' +"Preço: " + price +" R$")
-  var selledList = document.getElementById('list-section')
+  let selledList = document.getElementById('list-section')
 //---------------------------------------------------
 
 
